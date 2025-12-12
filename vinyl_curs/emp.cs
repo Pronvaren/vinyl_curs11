@@ -168,5 +168,46 @@ namespace vinyl_curs
                 MessageBox.Show("Ошибка при удалении: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        // СКРЫТИЕ ПАРОЛЯ ЛОГИНА ТЕЛЕФОНА
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            string colName = dataGridView1.Columns[e.ColumnIndex].Name;
+
+            if (e.Value == null)
+                return;
+
+            // СКРЫТИЕ ФИО
+            if (colName == "ФИО")
+            {
+                string fio = e.Value.ToString().Trim();
+                string[] parts = fio.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                if (parts.Length == 3)
+                    e.Value = parts[0] + " " + parts[1][0] + "******" + parts[2][0] + "*******";
+                else if (parts.Length == 2)
+                    e.Value = parts[0] + " " + parts[1][0] + "********";
+            }
+
+            // СКРЫТИЕ ЛОГИНА
+            else if (colName == "Логин")
+            {
+                string login = e.Value.ToString();
+                if (login.Length > 0)
+                    e.Value = login[0] + "*****";
+                e.FormattingApplied = true;
+            }
+
+            // СКРЫТИЕ НОМЕРА ТЕЛЕФОНА
+            else if (colName == "Номер телефона")
+            {
+                string phone = e.Value.ToString();
+                if (phone.Length >= 2)
+                    e.Value = "***-***-" + phone.Substring(phone.Length - 2);
+                else
+                    e.Value = "***";
+                e.FormattingApplied = true;
+            }
+        }
     }
 }

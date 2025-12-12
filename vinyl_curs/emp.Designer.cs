@@ -50,6 +50,7 @@ namespace vinyl_curs
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(950, 565);
             this.dataGridView1.TabIndex = 46;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // button4
             // 
