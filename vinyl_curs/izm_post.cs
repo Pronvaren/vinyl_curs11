@@ -16,7 +16,7 @@ namespace vinyl_curs
     {
         private string userRole;
         private string userFio;
-        private int postId; 
+        private int postId;
 
         string connStr = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
 
@@ -84,7 +84,6 @@ namespace vinyl_curs
 
         private void izm_post_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button2_Click(object sender, EventArgs e)

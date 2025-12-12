@@ -29,6 +29,7 @@ namespace vinyl_curs
 
         private void composer_Load(object sender, EventArgs e)
         {
+
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 conn.Open();

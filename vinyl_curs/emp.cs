@@ -30,6 +30,7 @@ namespace vinyl_curs
 
         private void emp_Load(object sender, EventArgs e)
         {
+
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 conn.Open();

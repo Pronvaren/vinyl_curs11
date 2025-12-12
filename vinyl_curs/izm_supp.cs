@@ -36,7 +36,6 @@ namespace vinyl_curs
 
         private void izm_supp_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button2_Click(object sender, EventArgs e)

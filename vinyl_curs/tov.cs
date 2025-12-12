@@ -17,6 +17,7 @@ namespace vinyl_curs
     {
         private string userRole;
         private string userFio;
+        
 
         string connStr = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
         public tov(string fio, string role)
@@ -39,6 +40,7 @@ namespace vinyl_curs
 
         private void tov_Load(object sender, EventArgs e)
         {
+            
             if (userRole == "Продавец")
             {
                 button1.Visible = false;

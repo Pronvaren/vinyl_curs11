@@ -35,6 +35,7 @@ namespace vinyl_curs
 
         private void dobav_emp_Load(object sender, EventArgs e)
         {
+
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
 

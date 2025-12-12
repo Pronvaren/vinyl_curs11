@@ -16,7 +16,7 @@ namespace vinyl_curs
     {
         private string userRole;
         private string userFio;
-        private int empId; 
+        private int empId;
 
         string connStr = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
 
@@ -71,7 +71,6 @@ namespace vinyl_curs
 
         private void izm_emp_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button3_Click(object sender, EventArgs e)

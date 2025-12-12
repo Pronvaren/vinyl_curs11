@@ -14,6 +14,7 @@ namespace vinyl_curs
     {
         private string userRole;
         private string userFio;
+
         public sprav(string fio, string role)
         {
             InitializeComponent();
