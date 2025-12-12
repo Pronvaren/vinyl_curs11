@@ -156,6 +156,7 @@
     <Compile Include="glav.Designer.cs">
       <DependentUpon>glav.cs</DependentUpon>
     </Compile>
+    <Compile Include="IdleManager.cs" />
     <Compile Include="izm_artist.cs">
       <SubType>Form</SubType>
     </Compile>

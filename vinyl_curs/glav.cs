@@ -14,6 +14,7 @@ namespace vinyl_curs
     {
         private string userRole;
         private string userFio;
+        IdleManager idleManager;
 
         public glav(string fio, string role)
         {
@@ -27,6 +28,8 @@ namespace vinyl_curs
 
         private void glav_Load(object sender, EventArgs e)
         {
+            idleManager = new IdleManager(this);
+
             label1.Text = userFio;
             label3.Text = userRole;
 
